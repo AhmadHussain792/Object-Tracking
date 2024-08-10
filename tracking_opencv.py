@@ -1,24 +1,32 @@
 # -*- coding: utf-8 -*-
+# -*- coding: utf-8 -*-
 import cv2
 import sys
+import tkinter as tk
+from tkinter import messagebox
 
+root=tk.Tk()
+root.withdraw()
 video = cv2.VideoCapture(0)
 
 if not video.isOpened():
-    print("Error: Video not found")
+    messagebox.showerror("ERROR", "Video not found")
+    root.destroy()
     sys.exit()
  
 for i in range(10):
     ok, frame = video.read()
     if not ok:
-        print('Cannot read video file')
+        messagebox.showerror("ERROR", "Could not read the file")
+        root.destroy()
         video.release()
         sys.exit()
 
 ok, frame = video.read()
 if not ok:
-    print('Error: Video not found')
+    messagebox.showerror("ERROR", "Video not found")
     video.release()
+    root.destroy()
     sys.exit()
 
 bbox = cv2.selectROI(frame, False)
@@ -28,7 +36,8 @@ ok = tracker.init(frame, bbox)
 while True:
     ok, frame = video.read()
     if not ok:
-        print("There was an error")
+        messagebox.showerror("ERROR", "There was an unexpected error")
+        root.destroy()
         break
         
     ok, bbox = tracker.update(frame)
@@ -46,4 +55,8 @@ while True:
     if k == 27:
         video.release()
         cv2.destroyAllWindows()
+        root.destroy()
         break
+
+video.release()
+cv2.destroyAllWindows()
