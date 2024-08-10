@@ -13,7 +13,8 @@ if not video.isOpened():
     messagebox.showerror("ERROR", "Video not found")
     root.destroy()
     sys.exit()
- 
+
+#skip the first 10 frames of the video, if the webcam takes longer to adjust completely to the lighting and brighten up
 for i in range(10):
     ok, frame = video.read()
     if not ok:
