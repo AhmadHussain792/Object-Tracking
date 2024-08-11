@@ -8,4 +8,3 @@ I created a virtual environment using Anaconda and installed all required librar
 opencv-contrib-python : 4.10.0.84
 numpy : 2.0.1
 requests : 2.32.3
-vc : 14.2
