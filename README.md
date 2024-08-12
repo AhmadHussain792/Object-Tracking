@@ -17,6 +17,11 @@ Error Handling: Displays error messages using Tkinter's 'messagebox' if the vide
 4. Press 'Esc' key to exit the tracking and close the application
 
 # Code Overview
+
+The flowchart below gives an overview of the code:
+
+![tracker drawio](https://github.com/user-attachments/assets/dcb2d89d-cb77-4b5d-9632-ac36c053301d)
+
 Initializing Tkinter and opening the webcam feed
 
 ![image](https://github.com/user-attachments/assets/7516d8ff-0544-4e1d-8ed4-7d8aa5d43074)
