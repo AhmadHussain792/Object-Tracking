@@ -55,6 +55,6 @@ The application closes when the 'Esc' key is pressed:
 
 ![image](https://github.com/user-attachments/assets/311c3e76-b1bb-4426-8317-8902f572c019)
 
-`cv2.waitKey(1)`: waits for 1 millisecond for a key press and retunrs ASCII code of the key
+`cv2.waitKey(1)`: waits for 1 millisecond for a key press and returns ASCII code of the key
 
 `'& 0xFF'`: ensures that only the lower 8 bits of the key code are kept, making the key press value compatible across different platforms.
