@@ -1,10 +1,3 @@
-The versions and packages that I used for this project are as follows:
-
-python version : 3.9.19
-conda version : 24.7.1
-
-I created a virtual environment using Anaconda and installed all required libraries inside the environment
-
-opencv-contrib-python : 4.10.0.84
-numpy : 2.0.1
-requests : 2.32.3
+opencv-contrib-python==4.10.0.84
+numpy==2.0.1
+requests==2.32.3
